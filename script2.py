@@ -4,13 +4,18 @@ from  tkinter import *
 window=Tk()
 
 def convert_kg():
+
+	#Convert kg to grams, pounds, and ounces
 	kg_grams=float(e1_value.get())*1000
-	t1.insert(END, kg_grams)
+	t1.delete("1.0", END) 		# Deletes the content from start to end
+	t1.insert(END, kg_grams)	#insert new content
 
 	kg_pounds= float(e1_value.get())*2.20462
+	t2.delete("1.0",END)
 	t2.insert(END, kg_pounds)
 
 	kg_ounces= float(e1_value.get())*35.274
+	t3.delete("1.0",END)
 	t3.insert(END, kg_ounces)
 
 #add button, entry, label, and text widgets to window
