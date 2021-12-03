@@ -3,7 +3,7 @@ from  tkinter import *
 #create window
 window=Tk()
 
-def km_to_miles():
+def convert_kg():
 	kg_grams=float(e1_value.get())*1000
 	t1.insert(END, kg_grams)
 
@@ -28,7 +28,7 @@ e1=Entry(window, textvariable=e1_value)
 e1.grid(row=0,column=1)
 
 
-b1=Button(window, text="Convert", command=km_to_miles)
+b1=Button(window, text="Convert", command=convert_kg)
 b1.grid(row=0,column=2)
 
 t1=Text(window, height=1, width=20)
